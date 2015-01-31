@@ -2,6 +2,7 @@ var map;
 var infowindow = new google.maps.InfoWindow();
 currentFeature_or_Features = null;
 var geojson;
+var apikey  = 'AIzaSyCdIsH3I_VQC8s42u-D7gqj5DeoN3nQlUU';
 
 function init(){
 	map = new google.maps.Map(document.getElementById('map'),{
@@ -154,4 +155,18 @@ function ClearText(){
 		"features": []
 	};
 	ClearMap();
+}
+
+function PostalToLatLng(){	
+	postalCode = document.getElementById("postal_string").value;
+	geocoder = new google.maps.Geocoder();
+	geocoder.geocode( {'address' : postalCode}, function (results, status) { 
+
+	if (status == google.maps.GeocoderStatus.OK) { 
+		document.getElementById("lat_string").value = results[0].geometry.location.lat();
+		document.getElementById("long_string").value = results[0].geometry.location.lng();
+	} else{ 
+		alert('Postal code seems incorrect')
+	}
+	});
 }

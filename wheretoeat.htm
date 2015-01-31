@@ -28,10 +28,14 @@
 				<div>
 					<label>Longitude:</label><input type="text" id="long_string" />
 				</div>
+				<div>
+					<label>Postal:</label><input type="text" id="postal_string" />
+				</div>
 				<br>
 				<div>
 					<input type="button" value="Add ganger" onclick="AddIdiot();"/>
 					<input type="button" value="Remove last" onclick="RemoveLastIdiot();"/>
+					<input type="button" value="Postal to Lat Lng" onclick="PostalToLatLng();"/>
 				</div>
 				<textarea id="put_geojson_string_here" style="display:none;"></textarea>
 				<div><input type="button" value="SHA-ZAM" title="CLEAR EVERYTHING" onclick="ClearText();"/></div>
