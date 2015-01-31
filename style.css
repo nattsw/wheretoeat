@@ -1,0 +1,41 @@
+body{
+	font-family: Helvetica, sans-serif;
+}
+#intro{
+	text-align: center;
+}
+#map{
+	border: 1px dotted black;
+	text-align: center;	
+	vertical-align: middle;
+}
+#left{
+	width: 60%;
+	height: 600px;
+	float:left;
+	padding: 10px;
+}
+#right{
+	height: 500px;
+	float: left; 
+	padding: 10px;
+	margin: 10px;
+}
+label { 
+	display: inline-block;
+	float: left;
+	clear: both;
+	width: 80px;
+	text-align: right;
+}
+input {
+	display: inline-block;
+	float: left;
+}
+
+#map{
+	height:100%;
+}
+#infoBox {
+	width:200px;
+}
